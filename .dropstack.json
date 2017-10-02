@@ -1,0 +1,10 @@
+{
+  "variables": "",
+  "instances": 1,
+  "alias": "www.subkit.io",
+  "type": "npm",
+  "excludes": [],
+  "userId": "go@dropstack.run",
+  "serviceUrl": "mtocazuk.cloud.dropstack.run",
+  "name": "mtocazuk"
+}
