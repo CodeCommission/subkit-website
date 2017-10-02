@@ -145,7 +145,7 @@ export default class Layout extends React.Component {
         <Helmet
           htmlAttributes={{lang: 'en'}}
         >
-          <title>DropStack</title>
+          <title>SUBKIT.IO</title>
           <meta charset="utf-8" />
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -167,6 +167,12 @@ export default class Layout extends React.Component {
           <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,600,200,600italic,700,900" rel="stylesheet" />
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
         </Helmet>
+        <div className="pace pace-inactive">
+          <div className="pace-progress" data-progress-text="100%" data-progress="99" style={{transform: 'translate3d(100%, 0px, 0px)'}}>
+            <div className="pace-progress-inner"></div>
+          </div>
+          <div className="pace-activity"></div>
+        </div>
         <Nav hasScrolled={this.state.hasScrolled}>
           <NavLogoLink href="/"><NavLogoImage src="/icon-subkit.svg" alt="icon subkit logo" /><NavLogoBrand>SubKit</NavLogoBrand></NavLogoLink>
           <NavItems items={ ['home', 'features', 'about'] } currentClassName="isActive">
