@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "name": "subkit-website",
+  "description": "SubKit WebSite",
+  "engines": {
+    "node": "^6"
+  },
+  "dependencies": {
+    "react-scrollspy": "^3.3.3",
+    "reunify": "latest",
+    "wow.js": "^1.2.2"
+  },
+  "scripts": {
+    "export": "NODE_ENV=production reunify export",
+    "export:dev": "NODE_ENV=production reunify export -d",
+    "export:package": "NODE_ENV=production reunify export -p",
+    "export:package:dev": "NODE_ENV=production reunify export -p -d",
+    "dev": "PORT=8080 NODE_ENV=development reunify serve",
+    "start": "PORT=80 NODE_ENV=production reunify serve --silent"
+  }
+}
