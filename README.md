@@ -1,3 +1,3 @@
-# SubKit Website
+# SubKit WebSite
 
 https://subkit.io
