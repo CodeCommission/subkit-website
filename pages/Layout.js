@@ -42,6 +42,18 @@ const Nav = styled.div`
   }
 
   & img {
+    -moz-filter: ${props => props.hasScrolled
+      ? 'invert()'
+      : 'none'
+    };
+    -o-filter: ${props => props.hasScrolled
+      ? 'invert()'
+      : 'none'
+    };
+    -webkit-filter: ${props => props.hasScrolled
+      ? 'invert()'
+      : 'none'
+    };
     filter: ${props => props.hasScrolled
       ? 'invert()'
       : 'none'
@@ -85,6 +97,31 @@ const NavLink = styled.a`
   :hover {
     color: #009cff;
   }
+`
+
+const ScrollToTop = styled.a`
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-align: center;
+  background: whiteSmoke;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 999999;
+  display: none;
+  background: #009cff;
+  opacity: 0.5;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: block;
 `
 
 const NavLogoImage = styled.img`
@@ -175,10 +212,10 @@ export default class Layout extends React.Component {
         </div>
         <Nav hasScrolled={this.state.hasScrolled}>
           <NavLogoLink href="/"><NavLogoImage src="/icon-subkit.svg" alt="icon subkit logo" /><NavLogoBrand>SubKit</NavLogoBrand></NavLogoLink>
-          <NavItems items={ ['home', 'features', 'about'] } currentClassName="isActive">
-            <NavItem><NavLink href={'/#home'}>Home</NavLink></NavItem>
-            <NavItem><NavLink href={'/#features'}>features</NavLink></NavItem>
+          <NavItems items={['features', 'about', 'examples']} currentClassName="isActive">
+            <NavItem><NavLink href={'/#features'}>Features</NavLink></NavItem>
             <NavItem><NavLink href={'/#about'}>About</NavLink></NavItem>
+            <NavItem><NavLink href={'/#examples'}>Examples</NavLink></NavItem>
             <NavItem><NavLink href={'https://github.com/CodeCommission/subkit/tree/master/docs'}><i className="fa fa-github" aria-hidden="true" />&nbsp;Docs</NavLink></NavItem>
           </NavItems>
         </Nav>
@@ -186,6 +223,7 @@ export default class Layout extends React.Component {
           {this.props.children}
         </Content>
         <Footer>
+          <ScrollToTop href="#"><i className="fa fa-angle-up"></i></ScrollToTop>
           <NavItems>
             <NavItem>
               <NavLink href="https://codecommission.com" target="_blank" rel="noopener">©2017 subkit.io · CodeCommission ·</NavLink>
@@ -195,7 +233,6 @@ export default class Layout extends React.Component {
             <NavItem><NavLink href="https://www.codecommission.com/legal.html" target="_blank" rel="noopener">Imprint</NavLink></NavItem>
             <NavItem><NavLink href="https://www.codecommission.com/legal.html" target="_blank" rel="noopener">Legal</NavLink></NavItem>
             <NavItem><NavLink href={'https://github.com/CodeCommission/subkit'}><i className="fa fa-github" aria-hidden="true" />&nbsp;GitHub</NavLink></NavItem>
-            <NavItem><NavLink href="#home">Home</NavLink></NavItem>
           </NavItems>
         </Footer>
       </LayoutContainer>
