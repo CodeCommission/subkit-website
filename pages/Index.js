@@ -131,6 +131,7 @@ const AboutSectionContent = styled.div`
   display: -webkit-flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-flow: wrap;
 `
 
 const AboutInfoContainer = styled.div`
