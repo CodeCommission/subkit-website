@@ -217,7 +217,9 @@ export default class Index extends React.Component {
             </Jumbotron>
 
             <TechStackContainer>
-              <Video src="getting-started.gif" alt="getting started" />
+              <a href="getting-started.gif">
+                <Video src="getting-started.gif" alt="getting started" />
+              </a>
             </TechStackContainer>
 
             <TechStackContainer>
