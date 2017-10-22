@@ -1,9 +1,9 @@
 [
   "/",
-  "/bundle.js",
+  "/main.js",
   "/sw.js",
   "/manifest.json",
-  "/bundle.css",
+  "/main.css",
   "/getting-started.gif",
   "/logo.svg",
   "/icon-graphql.svg",
@@ -14,5 +14,7 @@
   "/icon-apollo.svg",
   "/icon-angular.svg",
   "/icon-subkit.svg",
-  "/icon-dropstack.svg"
+  "/icon-dropstack.svg",
+  "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,600,200,600italic,700,900",
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"
 ]
