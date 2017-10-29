@@ -4,6 +4,7 @@
   "alias": "www.subkit.io",
   "type": "npm",
   "excludes": [],
+  "stateful": false,
   "serviceUrl": "mtocazuk.cloud.dropstack.run",
   "name": "mtocazuk"
 }
