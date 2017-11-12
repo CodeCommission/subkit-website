@@ -2,7 +2,7 @@
   "variables": "",
   "instances": 1,
   "alias": "www.subkit.io",
-  "type": "npm",
+  "type": "node8",
   "excludes": [],
   "stateful": false,
   "serviceUrl": "mtocazuk.cloud.dropstack.run",
